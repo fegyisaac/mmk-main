@@ -1,8 +1,13 @@
-import React from "react";
+
+
 import Container from "./Container";
 import { AiOutlineCopyright } from "react-icons/ai";
 
 const Footer = () => {
+
+  
+
+
   return (
     <div className="w-full bg-[#000000]">
       <Container className="max-w-container mx-auto border-t-[1px] group">
@@ -19,7 +24,10 @@ const Footer = () => {
         </p>
       </Container>
     </div>
+    
   );
 };
 
 export default Footer;
+
+

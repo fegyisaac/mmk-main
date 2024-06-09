@@ -6,10 +6,8 @@ import React from 'react'
 import Price from './Price';
 
 
-interface Props {
-    product: ProductProps;
-  }
-const ProductInfo = ({ product }: Props) => {
+
+const ProductInfo = ({ product }: any) => {
   return (
     <div className="flex flex-col gap-5">
       <h2 className="text-4xl font-semibold">{product?.title}</h2>

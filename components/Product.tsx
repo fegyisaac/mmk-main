@@ -22,7 +22,7 @@ const Product = ({ product, bg }: any) => {
     <div className="border-black border group hover:shadow-lg duration-200 shadow-gray-500 rounded-md overflow-hidden group">
       <div className="bg-white overflow-hidden">
         <div className={`relative ${bg}`}>
-          <Link href={`/`}>
+          <Link href={`product/${product._id}`}>
             <Image
               src={product.img}
               alt="product image"
@@ -49,7 +49,7 @@ const Product = ({ product, bg }: any) => {
               Add to bag
             </button>
             <Link
-              href={`/product/${product._id}`}
+              href={`product/${product._id}`}
               className="bg-gray-800 text-gray-200 px-[5px] py-1 text-[10px] rounded-full flex items-center gap-1 hover:bg-gray-950 hover:text-white duration-200"
             >
               <span>
