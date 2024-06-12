@@ -58,7 +58,7 @@ var Cart = function () {
             react_1["default"].createElement("h2", null, "Price"),
             react_1["default"].createElement("h2", null, "Quantity"),
             react_1["default"].createElement("h2", null, "Sub Total")),
-        react_1["default"].createElement("div", { className: "mt-5" }, productData.map(function (item) { return (react_1["default"].createElement("div", { key: item === null || item === void 0 ? void 0 : item.id },
+        react_1["default"].createElement("div", { className: "mt-5" }, productData.map(function (item) { return (react_1["default"].createElement("div", { key: item === null || item === void 0 ? void 0 : item._id },
             react_1["default"].createElement(CartItem_1["default"], { item: item }))); })),
         react_1["default"].createElement("button", { onClick: handleReset, className: "py-2 px-10 bg-red-500 text-white font-semibold uppercase mb-4 hover:bg-red-700 duration-300" }, "Reset cart"),
         react_1["default"].createElement("div", { className: "flex flex-col md:flex-row justify-between border p-4 items-center gap-2 md:gap-0" },

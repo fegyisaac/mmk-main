@@ -6,9 +6,7 @@ interface StoreState {
 }
 
 const initialState: StoreState = {
-  productData: [
-
-  ],
+  productData: [],
 };
 
 export const orebiSlice = createSlice({
@@ -16,26 +14,32 @@ export const orebiSlice = createSlice({
   initialState,
   reducers: {
     addToCart: (state, action) => {
-      const existingProduct = state?.productData.find((item: ProductProps) => {
-        item?.id === action?.payload?.id;
-      });
+      
+      const existingProduct = state?.productData.find(
+        (item: ProductProps) => item?._id === action?.payload?._id
+      );
+
+      console.log(existingProduct);
+
       if (existingProduct) {
+        existingProduct && existingProduct.quantity++;
         // existingProduct.quantity += action.payload.quantity;
-      // existingProduct && existingProduct.quantity++;
+        console.log("mar amaka");
       } else {
         state.productData.push(action.payload);
+        console.log("bread and akara");
       }
     },
     increaseQuantity: (state, action) => {
       const existingProduct = state.productData.find(
-        (item: ProductProps) => item.id === action.payload.id
+        (item: ProductProps) => item._id === action.payload._id
       );
       existingProduct && existingProduct.quantity++;
       // existingProduct.quantity++;
     },
     decreaseQuantity: (state, action) => {
       const existingProduct = state.productData.find(
-        (item: ProductProps) => item.id === action.payload.id
+        (item: ProductProps) => item._id === action.payload._id
       );
       if (existingProduct?.quantity === 1) {
         existingProduct.quantity === 1;
@@ -45,7 +49,7 @@ export const orebiSlice = createSlice({
     },
     deleteProduct: (state, action) => {
       state.productData = state.productData.filter(
-        (item) => item.id !== action.payload
+        (item) => item._id !== action.payload
       );
     },
     resetCart: (state) => {

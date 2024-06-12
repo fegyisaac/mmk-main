@@ -11,25 +11,25 @@ exports.orebiSlice = toolkit_1.createSlice({
     initialState: initialState,
     reducers: {
         addToCart: function (state, action) {
-            var existingProduct = state === null || state === void 0 ? void 0 : state.productData.find(function (item) {
-                var _a;
-                (item === null || item === void 0 ? void 0 : item.id) === ((_a = action === null || action === void 0 ? void 0 : action.payload) === null || _a === void 0 ? void 0 : _a.id);
-            });
+            var existingProduct = state === null || state === void 0 ? void 0 : state.productData.find(function (item) { var _a; return (item === null || item === void 0 ? void 0 : item._id) === ((_a = action === null || action === void 0 ? void 0 : action.payload) === null || _a === void 0 ? void 0 : _a._id); });
+            console.log(existingProduct);
             if (existingProduct) {
+                existingProduct && existingProduct.quantity++;
                 // existingProduct.quantity += action.payload.quantity;
-                // existingProduct && existingProduct.quantity++;
+                console.log("mar amaka");
             }
             else {
                 state.productData.push(action.payload);
+                console.log("bread and akara");
             }
         },
         increaseQuantity: function (state, action) {
-            var existingProduct = state.productData.find(function (item) { return item.id === action.payload.id; });
+            var existingProduct = state.productData.find(function (item) { return item._id === action.payload._id; });
             existingProduct && existingProduct.quantity++;
             // existingProduct.quantity++;
         },
         decreaseQuantity: function (state, action) {
-            var existingProduct = state.productData.find(function (item) { return item.id === action.payload.id; });
+            var existingProduct = state.productData.find(function (item) { return item._id === action.payload._id; });
             if ((existingProduct === null || existingProduct === void 0 ? void 0 : existingProduct.quantity) === 1) {
                 existingProduct.quantity === 1;
             }
@@ -38,7 +38,7 @@ exports.orebiSlice = toolkit_1.createSlice({
             }
         },
         deleteProduct: function (state, action) {
-            state.productData = state.productData.filter(function (item) { return item.id !== action.payload; });
+            state.productData = state.productData.filter(function (item) { return item._id !== action.payload; });
         },
         resetCart: function (state) {
             state.productData = [];
