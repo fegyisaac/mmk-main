@@ -1,5 +1,4 @@
 // "use client";
-
 // import { ProductProps } from "@/type";
 // import Link from "next/link";
 // import Image from "next/image";
@@ -9,40 +8,29 @@
 // import { useDispatch } from "react-redux";
 // import toast, { Toaster } from "react-hot-toast";
 // import { addToCart } from "@/Redux/Slices/orebiSlice";
-
 // interface Props {
 //   product: ProductProps;
 //   bg?: string;
 // }
-
-
-
-{/* <div>
+{ /* <div>
             <Image
               src={''}
               alt="emptyCart"
               className="w-80 rounded-lg p-4 mx-auto"
             />
-          </div> */}
-
-
-
-
-        //   <Link href={`/`}>
-        //   <Image
-        //     src={item.img}
-        //     alt="product image"
-        //     width={50}
-        //     height={50}
-        //     className="w-32 h-32 object-contain"
-        //   />
-        // </Link>
-
-
-
+          </div> */
+}
+//   <Link href={`/`}>
+//   <Image
+//     src={item.img}
+//     alt="product image"
+//     width={50}
+//     height={50}
+//     className="w-32 h-32 object-contain"
+//   />
+// </Link>
 // const Product = ({ product, bg }: any) => {
 //   const dispatch = useDispatch();
-
 //   console.log(product);
 //   return (
 //     <div className="w-full relative group border-[1px] border-black hover:shadow-lg duration-200 shadow-gray-500 rounded-md overflow-hidden group">
@@ -57,7 +45,6 @@
 //               className="w-full h-72 object-cover"
 //             />
 //           </Link>
-
 //           {/*  */}
 //           <div className="absolute bottom-0 flex items-center gap-5 justify-center translate-y-[110%] group-hover:-translate-y-2 transition-transform duration-300">
 //             <button
@@ -93,7 +80,6 @@
 //           )} */}
 //         </div>
 //       </div>
-
 //       <div className="max-w-80 py-6 flex flex-col gap-1 px-4">
 //         <div className="flex items-center justify-between">
 //           <h2 className="text-lg text-primeColor font-bold">
@@ -119,7 +105,6 @@
 //           </div>
 //         </div>
 //       </div>
-
 //       <Toaster
 //         position="bottom-right"
 //         toastOptions={{
@@ -132,5 +117,4 @@
 //     </div>
 //   );
 // };
-
 // export default Product;

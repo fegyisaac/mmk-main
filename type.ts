@@ -1,7 +1,7 @@
 import { StaticImageData } from "next/image";
 
 export interface ProductProps {
-  _id: string;
+  id: string;
   _type: string;
   _rev: string;
   _createdAt: string;
@@ -12,6 +12,7 @@ export interface ProductProps {
   ratings: number;
   description: string;
   brand: string;
+  // quantity: number;
 
   image: {
     _type: string;

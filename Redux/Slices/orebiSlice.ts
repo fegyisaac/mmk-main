@@ -6,7 +6,9 @@ interface StoreState {
 }
 
 const initialState: StoreState = {
-  productData: [],
+  productData: [
+
+  ],
 };
 
 export const orebiSlice = createSlice({
@@ -15,23 +17,25 @@ export const orebiSlice = createSlice({
   reducers: {
     addToCart: (state, action) => {
       const existingProduct = state?.productData.find((item: ProductProps) => {
-        item?._id === action?.payload?._id;
+        item?.id === action?.payload?.id;
       });
       if (existingProduct) {
-        existingProduct.quantity += action.payload.quantity;
+        // existingProduct.quantity += action.payload.quantity;
+      // existingProduct && existingProduct.quantity++;
       } else {
         state.productData.push(action.payload);
       }
     },
     increaseQuantity: (state, action) => {
       const existingProduct = state.productData.find(
-        (item: ProductProps) => item._id === action.payload._id
+        (item: ProductProps) => item.id === action.payload.id
       );
       existingProduct && existingProduct.quantity++;
+      // existingProduct.quantity++;
     },
     decreaseQuantity: (state, action) => {
       const existingProduct = state.productData.find(
-        (item: ProductProps) => item._id === action.payload._id
+        (item: ProductProps) => item.id === action.payload.id
       );
       if (existingProduct?.quantity === 1) {
         existingProduct.quantity === 1;
@@ -41,7 +45,7 @@ export const orebiSlice = createSlice({
     },
     deleteProduct: (state, action) => {
       state.productData = state.productData.filter(
-        (item) => item._id !== action.payload
+        (item) => item.id !== action.payload
       );
     },
     resetCart: (state) => {

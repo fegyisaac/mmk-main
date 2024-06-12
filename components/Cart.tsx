@@ -41,6 +41,7 @@ const Cart = () => {
 
 
 
+
     // // Stripe payment
 
     // const stripePromise = loadStripe(
@@ -81,7 +82,7 @@ const Cart = () => {
           </div>
           <div className="mt-5">
             {productData.map((item) => (
-              <div key={item?._id}>
+              <div key={item?.id}>
                 <CartItem item={item} />
               </div>
             ))}
@@ -148,13 +149,7 @@ const Cart = () => {
           transition={{ duration: 0.4 }}
           className="flex flex-col md:flex-row justify-center items-center gap-4 pb-20"
         >
-          <div>
-            <Image
-              src={''}
-              alt="emptyCart"
-              className="w-80 rounded-lg p-4 mx-auto"
-            />
-          </div>
+          
           <div className="max-w-[500px] p-4 py-8 bg-white flex flex-col gap-4 items-center rounded-md shadow-lg">
             <h1 className="text-xl font-bold uppercase">
               Your Cart feels lonely.

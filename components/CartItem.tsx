@@ -15,7 +15,7 @@ import {
 import { ProductProps } from "@/type";
 
 // interface Props {
-//   item: ProductProps;
+//   item: ProductProps;   
 // }
 
 const CartItem = ({item}: any ) => {
@@ -34,15 +34,7 @@ const CartItem = ({item}: any ) => {
           }}
           className="text-primeColor hover:text-red-500 cursor-pointer duration-300"
         />
-        <Link href={`/`}>
-          <Image
-            src={item.img}
-            alt="product image"
-            width={50}
-            height={50}
-            className="w-32 h-32 object-contain"
-          />
-        </Link>
+        
         <h1 className="font-semibold">{item?.title.substring(0, 20)}</h1>
       </div>
 
@@ -54,7 +46,7 @@ const CartItem = ({item}: any ) => {
         <div className="flex w-1/3 items-center gap-6 text-lg">
           <span
             onClick={() => {
-              dispatch(decreaseQuantity({ _id: item?._id }));
+              dispatch(decreaseQuantity({ id: item?.id }));
               toast.success("Product reduced successfully");
             }}
             className="w-6 h-6 bg-gray-100 text-2xl flex items-center justify-center hover:bg-gray-300 cursor-pointer duration-300 border-[1px] border-gray-300 hover:border-gray-500"
@@ -64,7 +56,7 @@ const CartItem = ({item}: any ) => {
           <p>{item?.quantity}</p>
           <span
             onClick={() => {
-              dispatch(increaseQuantity({ _id: item?._id }));
+              dispatch(increaseQuantity({ id: item?.id }));
               toast.success("Product added successully");
             }}
             className="w-6 h-6 bg-gray-100 text-2xl flex items-center justify-center hover:bg-gray-300 cursor-pointer duration-300 border-[1px] border-gray-300 hover:border-gray-500"
