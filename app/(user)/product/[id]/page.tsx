@@ -6,6 +6,9 @@ import Image from "next/image";
 import ProductInfo from "@/components/ProductInfo";
 import { useEffect, useState } from "react";
 
+
+import dad from "@/assets/Mantis 2.jpg"
+
 const ProductPage = () => {
   const params = useParams();
   const { id } = params;
@@ -27,11 +30,10 @@ const ProductPage = () => {
     }
   }, [id]);
 
-  // const data = productData.find((item) => item.id === parseInt(id));
-  const data = productData.find((item) => item.id === id);
+  const data = productData.find((item) => item.id === parseInt(id));
+  // const data = productData.find((item) => item.id === id);
 
-  console.log(data);
-
+ console.log(data)
   return (
     <div>
       <ProductInfo product={data} />

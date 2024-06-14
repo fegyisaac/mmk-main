@@ -29,29 +29,6 @@ var Cart = function () {
         confirmed && dispatch(orebiSlice_1.resetCart());
         react_hot_toast_1["default"].success("Cart resetted successfully!");
     };
-    // // Stripe payment
-    // const stripePromise = loadStripe(
-    //   process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY!
-    // );
-    // const createCheckout = async () => {
-    //   if (session?.user) {
-    //     const stripe = await stripePromise;
-    //     const response = await fetch("http://localhost:3000/api/checkout", {
-    //       method: "POST",
-    //       headers: { "Content-Type": "appication/json" },
-    //       body: JSON.stringify({
-    //         items: productData,
-    //         email: session?.user?.email,
-    //       }),
-    //     });
-    //     const data = await response.json();
-    //     if (response.ok) {
-    //       stripe?.redirectToCheckout({ sessionId: data.id });
-    //     }
-    //   } else {
-    //     toast.error("Please sign in to make Checkout");
-    //   }
-    // };
     return (react_1["default"].createElement(Container_1["default"], null, (productData === null || productData === void 0 ? void 0 : productData.length) > 0 ? (react_1["default"].createElement("div", { className: "pb-20" },
         react_1["default"].createElement("div", { className: "w-full h-20 bg-[#f5f7f7] text-primeColor hidden lg:grid grid-cols-5 place-content-center px-6 text-lg font-semibold" },
             react_1["default"].createElement("h2", { className: "col-span-2" }, "Product"),

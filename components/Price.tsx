@@ -6,7 +6,7 @@ interface Props {
   const Price = ({ amount, className }: Props) => {
     const priceFormat = new Number(amount).toLocaleString("en-US", {
       style: "currency",
-      currency: "USD",
+      currency: "NGN",
       maximumFractionDigits: 2,
     });
     return <span className={`${className}`}>{priceFormat}</span>;

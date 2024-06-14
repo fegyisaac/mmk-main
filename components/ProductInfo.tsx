@@ -7,7 +7,6 @@ import Price from "./Price";
 import { addToCart } from "@/Redux/Slices/orebiSlice";
 import toast from "react-hot-toast";
 import { useDispatch } from "react-redux";
-import Container from "./Container";
 import hand from "../assets/Assesories.jpeg"
 
 const ProductInfo = ({ product }: any) => {
@@ -15,11 +14,10 @@ const ProductInfo = ({ product }: any) => {
 
   return (
     <div className="w-[93%] my-10 mx-auto">
-      {/* <Container className=""> */}
       <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-6 gap-4 h-full -mt-5 xl:-mt-8 bg-gray-100 p-4">
-        {/* <div className="h-full xl:col-span-2">
-          <img src="../assets/Assesories.jpeg" width={200} height={400} />
-        </div> */}
+        <div className="h-full xl:col-span-2">
+          {/* <img src={hand} width={200} height={400} /> */}
+        </div>
 
         <div className="w-full md:col-span-2 xl:col-span-3 xl:p-14 flex flex-col gap-6 justify-center">
           <div className="flex flex-col gap-5">
@@ -42,9 +40,7 @@ const ProductInfo = ({ product }: any) => {
             <p className="text-sm tracking-wide text-gray-600">
               {product?.description}
             </p>
-            <p className="text-sm text-gray-500">
-              Be the first to leave a review.
-            </p>
+         
             <button
               onClick={() => {
                 dispatch(addToCart(product));
@@ -56,14 +52,10 @@ const ProductInfo = ({ product }: any) => {
             >
               Add to Cart
             </button>
-            <p className="font-normal text-sm">
-              <span className="text-base font-medium">Categories:</span> Spring
-              collection, Streetwear, Women Tags: featured SKU: N/A
-            </p>
+          
           </div>
         </div>
       </div>
-      {/* </Container> */}
     </div>
   );
 };
