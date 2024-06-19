@@ -3,7 +3,7 @@
 import React, { useEffect, useState } from "react";
 import Container from "./Container";
 import { StateProps } from "@/type";
-// import emptyCart from "@/assets/emptyCart.png";
+import emptyCart from "@/assets/emptyCart.png";
 
 import { useDispatch, useSelector } from "react-redux";
 import Link from "next/link";
@@ -117,10 +117,16 @@ const Cart = () => {
           initial={{ y: 30, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.4 }}
-          className="flex flex-col md:flex-row justify-center items-center gap-4 pb-20"
+          className="flex flex-col md:flex-row justify-center items-center gap-4 pb-20 rounded-md shadow-lg"
         >
-          
-          <div className="max-w-[500px] p-4 py-8 bg-white flex flex-col gap-4 items-center rounded-md shadow-lg">
+            <div>
+            <Image
+              src={emptyCart}
+              alt="emptyCart"
+              className="w-80 rounded-lg p-4 mx-auto"
+            />
+          </div>
+          <div className="max-w-[500px] p-4 py-8 bg-white flex flex-col gap-4 items-center ">
             <h1 className="text-xl font-bold uppercase">
               Your Cart feels lonely.
             </h1>

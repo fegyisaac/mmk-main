@@ -3,9 +3,10 @@
 exports.__esModule = true;
 var react_1 = require("react");
 var Container_1 = require("./Container");
-// import emptyCart from "@/assets/emptyCart.png";
+var emptyCart_png_1 = require("@/assets/emptyCart.png");
 var react_redux_1 = require("react-redux");
 var link_1 = require("next/link");
+var image_1 = require("next/image");
 var CartItem_1 = require("./CartItem");
 var Price_1 = require("./Price");
 var orebiSlice_1 = require("@/Redux/Slices/orebiSlice");
@@ -63,8 +64,10 @@ var Cart = function () {
                 react_1["default"].createElement("div", { className: "flex justify-end" },
                     react_1["default"].createElement("button", { 
                         // onClick={createCheckout}
-                        className: "w-52 h-10 bg-primeColor text-white hover:bg-black duration-300" }, "Proceed to Checkout")))))) : (react_1["default"].createElement(framer_motion_1.motion.div, { initial: { y: 30, opacity: 0 }, animate: { y: 0, opacity: 1 }, transition: { duration: 0.4 }, className: "flex flex-col md:flex-row justify-center items-center gap-4 pb-20" },
-        react_1["default"].createElement("div", { className: "max-w-[500px] p-4 py-8 bg-white flex flex-col gap-4 items-center rounded-md shadow-lg" },
+                        className: "w-52 h-10 bg-primeColor text-white hover:bg-black duration-300" }, "Proceed to Checkout")))))) : (react_1["default"].createElement(framer_motion_1.motion.div, { initial: { y: 30, opacity: 0 }, animate: { y: 0, opacity: 1 }, transition: { duration: 0.4 }, className: "flex flex-col md:flex-row justify-center items-center gap-4 pb-20 rounded-md shadow-lg" },
+        react_1["default"].createElement("div", null,
+            react_1["default"].createElement(image_1["default"], { src: emptyCart_png_1["default"], alt: "emptyCart", className: "w-80 rounded-lg p-4 mx-auto" })),
+        react_1["default"].createElement("div", { className: "max-w-[500px] p-4 py-8 bg-white flex flex-col gap-4 items-center " },
             react_1["default"].createElement("h1", { className: "text-xl font-bold uppercase" }, "Your Cart feels lonely."),
             react_1["default"].createElement("p", { className: "text-sm text-center px-10 -mt-2" }, "Your Shopping cart lives to serve. Give it purpose - fill it with books, electronics, videos, etc. and make it happy."),
             react_1["default"].createElement(link_1["default"], { href: "/", className: "bg-primeColor rounded-md cursor-pointer hover:bg-black active:bg-gray-900 px-8 py-2 font-semibold text-lg text-gray-200 hover:text-white duration-300" }, "Continue Shopping"))))));

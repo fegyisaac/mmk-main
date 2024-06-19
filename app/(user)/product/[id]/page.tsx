@@ -5,23 +5,11 @@ import { useParams } from "next/navigation";
 import Image from "next/image";
 import ProductInfo from "@/components/ProductInfo";
 import { useEffect, useState } from "react";
-
-import dad from "@/assets/Mantis 2.jpg";
+import { Product } from "@/type";
 
 const ProductPage = () => {
-  interface Product {
-    id: number;
-    links: string;
-    img: string;
-    title: string;
-    prevPrice: number;
-    price: number;
-    brand: string;
-    new: boolean;
-    rating: number;
-    description: string;
-  }
-  const params = useParams();
+
+  const params = useParams<{ id: string | string[] }>();
   const { id } = params;
   const [productData, setProductData] = useState<Product[]>([]);
 
@@ -29,7 +17,10 @@ const ProductPage = () => {
     const fetchData = async () => {
       try {
         const res = await fetch("http://localhost:3000/products");
+        // const res = await fetch("/data.json");
         const jsonData: Product[] = await res.json();
+        console.log("joson: ", jsonData);
+        
         setProductData(jsonData);
       } catch (error) {
         console.error("Error fetching data:", error);
@@ -41,14 +32,14 @@ const ProductPage = () => {
     }
   }, [id]);
 
-  const parsedId = Array.isArray(id) ? parseInt(id[0], 10) : parseInt(id, 10);
+  const parsedId = Array.isArray(id)
+    ? parseInt(id[0], 10)
+    : parseInt(id ?? "", 10);
 
   const data: Product | undefined = productData.find(
-    (item) => item.id === parsedId
+    (item: Product) => parseInt(item.id, 10) === parsedId
   );
-  // const data = productData.find((item) => item.id === id);
 
-  console.log(data);
   return (
     <div>
       <ProductInfo product={data} />

@@ -5,7 +5,9 @@ import Navbar from "@/components/Navbar";
 import "slick-carousel/slick/slick.css";
 import PageBtn from "@/components/PageBtn";
 import Layout from "@/components/Layout";
+// import Footer from "../";
 import Footer from "@/components/Footer";
+
 
 const inter = Inter({ subsets: ["latin"] });
 

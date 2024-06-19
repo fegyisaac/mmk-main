@@ -3,7 +3,6 @@
 import Container from "./Container";
 import { AiOutlineCopyright } from "react-icons/ai";
 import Image from 'next/image';
-import hand from "@/assets/Black-Tragbada.jpg"
 
 const Footer = () => {
 
@@ -11,8 +10,8 @@ const Footer = () => {
 
 
   return (
-    <div className="w-full bg-[#000000]">
-      <div className="w-full mx-auto border-t-[1px] group">
+    <div className="w-full py-8 bg-black">
+      <div className="w-full mx-auto group">
         <p className="text-titleFont font-normal text-center flex md:items-center justify-center text-lightText duration-200 text-sm">
           <span className="text-md mr-[1px] mt-[2px] md:mt-0 text-center hidden md:inline-flex">
             <AiOutlineCopyright />

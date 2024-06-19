@@ -7,17 +7,20 @@ import Price from "./Price";
 import { addToCart } from "@/Redux/Slices/orebiSlice";
 import toast from "react-hot-toast";
 import { useDispatch } from "react-redux";
-import hand from "../assets/Assesories.jpeg"
+import hand from "../assets/Assesories.jpeg";
 
 const ProductInfo = ({ product }: any) => {
   const dispatch = useDispatch();
 
   return (
     <div className="w-[93%] my-10 mx-auto">
-      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-6 gap-4 h-full -mt-5 xl:-mt-8 bg-gray-100 p-4">
-        <div className="h-full xl:col-span-2">
-          {/* <img src={hand} width={200} height={400} /> */}
-        </div>
+      <div className="flex flex-col lg:flex-row justify-between item-center gap-4 h-full -mt-5 xl:-mt-8 bg-gray-100 p-4">
+      {/* <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-6 gap-4 h-full -mt-5 xl:-mt-8 bg-gray-100 p-4"> */}
+       <div className="h-full md:mb-10">
+          <Image src={product?.img} width={600} height={600} alt="text" priority className="w-full h-full" />
+
+       </div>
+<div className="flex-1">
 
         <div className="w-full md:col-span-2 xl:col-span-3 xl:p-14 flex flex-col gap-6 justify-center">
           <div className="flex flex-col gap-5">
@@ -40,7 +43,7 @@ const ProductInfo = ({ product }: any) => {
             <p className="text-sm tracking-wide text-gray-600">
               {product?.description}
             </p>
-         
+
             <button
               onClick={() => {
                 dispatch(addToCart(product));
@@ -52,9 +55,10 @@ const ProductInfo = ({ product }: any) => {
             >
               Add to Cart
             </button>
-          
           </div>
         </div>
+        </div>
+
       </div>
     </div>
   );

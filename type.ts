@@ -1,5 +1,19 @@
 import { StaticImageData } from "next/image";
 
+
+
+export interface Product {
+  id: string;
+  links: string;
+  img: string;
+  title: string;
+  prevPrice: number;
+  price: number;
+  brand: string;
+  new: boolean;
+  rating: number;
+  description: string;
+}
 export interface ProductProps {
   _id: string;
   _type: string;

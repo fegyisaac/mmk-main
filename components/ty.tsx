@@ -134,3 +134,55 @@
 // };
 
 // export default Product;
+
+
+
+
+
+
+ {/* <div className="h-full xl:col-span-2"> */}
+        {/* </div> */}
+
+
+  // // Log values to debug
+  // console.log("params:", params);
+  // console.log("id:", id);
+  // console.log("parsedId:", parsedId);
+  // console.log("productData:", productData);
+  // console.log("data:", data);
+  // console.log("typeof id:", typeof parsedId);
+  // console.log("typeof productData:", typeof productData);
+  // console.log("productData length:", productData.length);
+  // console.log(data);
+
+  // productData.forEach((item) => {
+  //   console.log("item.id:", item.img);
+  //   console.log("typeof item.id:", typeof item.id);
+  // });
+
+  // if (productData.length === 0) {
+  //   console.log("Product data is not yet loaded or is empty.");
+  // }
+  // if (isNaN(parsedId)) {
+  //   return <div>Invalid product ID</div>;
+  // }
+
+  // // Handle the case when data is undefined
+  // if (!data) {
+  //   return <div>Product not found</div>;
+  // }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,5 +1,5 @@
 import Image from "next/image";
-import prod from "@/assets/productOfTheYear.webp"
+import prod from "@/public/assets/productOfTheYear.webp"
 import Link from "next/link";
 
 const HomeBanner = () => {

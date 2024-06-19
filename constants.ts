@@ -1,25 +1,25 @@
-import BlackKaftan from "/assets/Black-Hand-Kaftan.jpg";
-import BlackTragbada from "/assets/Black-Tragbada.jpg";
-import BlackTragbada2 from "/assets/Black-Tragbada2.jpg";
-import Burgundy from "/assets/Burgundy-African-senator.jpg";
-import Embroidery from "/assets/Embroidery-Agbada.jpg";
-import GreenAfricanSenator from "/assets/GreenAfricanSenatorKaftanNative..jpg";
-import GreyKaftan from "/assets/Grey-Kaftan-Native..jpg";
-import LapisBlue from "/assets/Lapis-Blue-African-senator-Kaftan-native..jpg";
-import IrishAfricanSenator from "/assets/IrishAfricansenatorKaftannative..jpg";
+import BlackKaftan from "/public/assets/Black-Hand-Kaftan.jpg";
+import BlackTragbada from "/public/assets/Black-Tragbada.jpg";
+import BlackTragbada2 from "/public/assets/Black-Tragbada2.jpg";
+import Burgundy from "/public/assets/Burgundy-African-senator.jpg";
+import Embroidery from "/public/assets/Embroidery-Agbada.jpg";
+import GreenAfricanSenator from "/public/assets/GreenAfricanSenatorKaftanNative..jpg";
+import GreyKaftan from "/public/assets/Grey-Kaftan-Native..jpg";
+import LapisBlue from "/public/assets/Lapis-Blue-African-senator-Kaftan-native..jpg";
+import IrishAfricanSenator from "/public/assets/IrishAfricansenatorKaftannative..jpg";
 
-import NavyblueKaftan from "/assets/NavyblueMixedColorKaftan..jpg";
-import Raisinpurplekaftan from "/assets/Raisin-purple-senator-kaftan-native..jpg";
-import RoguePinkKaftan from "/assets/RoguePinkKaftan..jpg";
-import RubyAfricanSenator from "/assets/RubyAfricansenatorkaftannative.jpg";
-import SapphireKaftan from "/assets/Sapphire-Kaftan-Native.jpg";
-import TheSamuraiTrakaftan from "/assets/TheSamuraiTrakaftan.jpg";
-import Ewaniwa from "/assets/The“Ewaniwa”Trad.jpg";
-import Iwalewa2 from "/assets/The“Iwalewa”Trad2.jpg";
+import NavyblueKaftan from "/public/assets/NavyblueMixedColorKaftan..jpg";
+import Raisinpurplekaftan from "/public/assets/Raisin-purple-senator-kaftan-native..jpg";
+import RoguePinkKaftan from "/public/assets/RoguePinkKaftan..jpg";
+import RubyAfricanSenator from "/public/assets/RubyAfricansenatorkaftannative.jpg";
+import SapphireKaftan from "/public/assets/Sapphire-Kaftan-Native.jpg";
+import TheSamuraiTrakaftan from "/public/assets/TheSamuraiTrakaftan.jpg";
+import Ewaniwa from "/public/assets/The“Ewaniwa”Trad.jpg";
+import Iwalewa2 from "/public/assets/The“Iwalewa”Trad2.jpg";
 
-import Tortillabrownkaftan from "/assets/Tortillabrownkaftan..jpg";
-import TraditionalAgbada from "/assets/TraditionalAgbada.jpg";
-import Iwalewa from "/assets/The“Iwalewa”Trad..jpg";
+import Tortillabrownkaftan from "/public/assets/Tortillabrownkaftan..jpg";
+import TraditionalAgbada from "/public/assets/TraditionalAgbada.jpg";
+import Iwalewa from "/public/assets/The“Iwalewa”Trad..jpg";
 
 export const availableProduct = [
   {

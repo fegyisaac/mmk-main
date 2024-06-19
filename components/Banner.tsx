@@ -112,7 +112,6 @@ const Banner = ({ banners }: any) => {
         {banners?.map((item: any) => (
           <div className="relative" key={item?._id}>
             <Image
-              // src={urlFor(item.image).url()}
               src={item.img}
               alt="banner image"
               width={2000}
