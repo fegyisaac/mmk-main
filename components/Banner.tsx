@@ -3,7 +3,6 @@
 import { useState } from "react";
 import Slider from "react-slick";
 import Image from "next/image";
-import Link from "next/link";
 
 const Banner = ({ banners }: any) => {
   const [dotActive, setDocActive] = useState(0);

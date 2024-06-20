@@ -8,10 +8,6 @@ import NextArr from "./NextArr";
 import PrevArr from "./PrevArr";
 import { availableProduct } from "../constants";
 
-// interface Props {
-//   products: ProductProps[];
-// }
-
 const NewArrival = () => {
   const settings = {
     infinite: true,
@@ -51,7 +47,6 @@ const NewArrival = () => {
   const ArrivalProduct = availableProduct.slice(1, 7);
 
   return (
-    // <Container className="absolute top-[400px] left-1/2 transform -translate-x-1/2">
 
     <Container  className="-mt-[120px]">
       <Slider {...settings}>

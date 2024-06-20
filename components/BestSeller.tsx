@@ -10,10 +10,6 @@ import { bestSellers } from "@/constants";
 import NextArr from "./NextArr";
 import PrevArr from "./PrevArr";
 
-// interface Props {
-//     products: ProductProps[];
-//     title?: string;
-//   }
 
 const BestSeller = () => {
   const settings = {

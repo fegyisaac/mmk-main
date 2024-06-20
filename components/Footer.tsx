@@ -1,14 +1,6 @@
-
-
-import Container from "./Container";
 import { AiOutlineCopyright } from "react-icons/ai";
-import Image from 'next/image';
 
 const Footer = () => {
-
-  
-
-
   return (
     <div className="w-full py-8 bg-black">
       <div className="w-full mx-auto group">
@@ -25,10 +17,7 @@ const Footer = () => {
         </p>
       </div>
     </div>
-    
   );
 };
 
 export default Footer;
-
-

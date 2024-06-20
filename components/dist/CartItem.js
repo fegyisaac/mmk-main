@@ -7,13 +7,10 @@ var Price_1 = require("./Price");
 var react_hot_toast_1 = require("react-hot-toast");
 var react_redux_1 = require("react-redux");
 var orebiSlice_1 = require("@/Redux/Slices/orebiSlice");
-// interface Props {
-//   item: ProductProps;   
-// }
 var CartItem = function (_a) {
     var item = _a.item;
     var dispatch = react_redux_1.useDispatch();
-    console.log(item === null || item === void 0 ? void 0 : item.quantity);
+    console.log(item === null || item === void 0 ? void 0 : item.price);
     return (react_1["default"].createElement("div", { className: "w-full grid grid-cols-5 mb-4 border py-2" },
         react_1["default"].createElement("div", { className: "flex col-span-5 md:col-span-2 items-center gap-4 ml-4" },
             react_1["default"].createElement(im_1.ImCross, { onClick: function () {

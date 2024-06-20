@@ -12,21 +12,16 @@ exports.orebiSlice = toolkit_1.createSlice({
     reducers: {
         addToCart: function (state, action) {
             var existingProduct = state === null || state === void 0 ? void 0 : state.productData.find(function (item) { var _a; return (item === null || item === void 0 ? void 0 : item._id) === ((_a = action === null || action === void 0 ? void 0 : action.payload) === null || _a === void 0 ? void 0 : _a._id); });
-            console.log(existingProduct);
             if (existingProduct) {
                 existingProduct && existingProduct.quantity++;
-                // existingProduct.quantity += action.payload.quantity;
-                console.log("mar amaka");
             }
             else {
                 state.productData.push(action.payload);
-                console.log("bread and akara");
             }
         },
         increaseQuantity: function (state, action) {
             var existingProduct = state.productData.find(function (item) { return item._id === action.payload._id; });
             existingProduct && existingProduct.quantity++;
-            // existingProduct.quantity++;
         },
         decreaseQuantity: function (state, action) {
             var existingProduct = state.productData.find(function (item) { return item._id === action.payload._id; });

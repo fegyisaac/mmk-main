@@ -3,8 +3,7 @@
 import React, { useEffect, useState } from "react";
 import Container from "./Container";
 import { StateProps } from "@/type";
-import emptyCart from "@/assets/emptyCart.png";
-
+import emptyCart from "@/public/assets/emptyCart.png";
 import { useDispatch, useSelector } from "react-redux";
 import Link from "next/link";
 import Image from "next/image";
@@ -17,9 +16,6 @@ import { motion } from "framer-motion";
 const Cart = () => {
   const { productData } = useSelector((state: StateProps) => state.orebi);
   const dispatch = useDispatch();
-  // const { data: session } = useSession();
-
-
   const [totalAmt, setTotalAmt] = useState(0);
 
   useEffect(() => {
@@ -102,7 +98,6 @@ const Cart = () => {
               </div>
               <div className="flex justify-end">
                 <button
-                  // onClick={createCheckout}
                   className="w-52 h-10 bg-primeColor text-white hover:bg-black duration-300"
                 >
                   Proceed to Checkout

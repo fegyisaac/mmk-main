@@ -3,7 +3,6 @@ import Banner from "@/components/Banner";
 import HomeBanner from "@/components/HomeBanner";
 import NewArrival from "@/components/NewArrival";
 
-// import Jewels from "@/assets/Assesories.jpeg";
 import Men from "@/public/assets/men.webp";
 import Women from "@/public/assets/WOMEN.webp";
 import Fabrics from "@/public/assets/fabrics.webp";
@@ -12,11 +11,6 @@ import BestSeller from "@/components/BestSeller";
 
 const Homepage = async () => {
   const banners = [
-    // {
-    //   _id: 56,
-    //   img: Jewels,
-    //   text: "Jewels",
-    // },
     {
       _id: 89,
       img: Men,

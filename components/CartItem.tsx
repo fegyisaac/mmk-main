@@ -1,6 +1,5 @@
 "use client";
 import React from "react";
-// import { ProductProps } from "../../type";
 import Image from "next/image";
 import Link from "next/link";
 import { ImCross } from "react-icons/im";
@@ -14,16 +13,13 @@ import {
 } from "@/Redux/Slices/orebiSlice";
 import { ProductProps } from "@/type";
 
-// interface Props {
-//   item: ProductProps;   
-// }
-
-const CartItem = ({item}: any ) => {
-
+const CartItem = ({ item }: any) => {
   const dispatch = useDispatch();
 
-  console.log(item?.quantity)
 
+  console.log(item?.price);
+
+  
   return (
     <div className="w-full grid grid-cols-5 mb-4 border py-2">
       <div className="flex col-span-5 md:col-span-2 items-center gap-4 ml-4">
@@ -36,10 +32,9 @@ const CartItem = ({item}: any ) => {
           }}
           className="text-primeColor hover:text-red-500 cursor-pointer duration-300"
         />
-        
+
         <h1 className="font-semibold">{item?.title.substring(0, 20)}</h1>
       </div>
-
 
       <div className="col-span-5 md:col-span-3 flex items-center justify-between py-4 md:py-0 px-4 lg:px-0">
         <p className="flex w-1/3 items-center text-lg font-semibold">
@@ -71,7 +66,6 @@ const CartItem = ({item}: any ) => {
         </div>
       </div>
 
-      
       <Toaster
         position="bottom-right"
         toastOptions={{
@@ -82,7 +76,7 @@ const CartItem = ({item}: any ) => {
         }}
       />
     </div>
-  )
-}
+  );
+};
 
-export default CartItem
+export default CartItem;

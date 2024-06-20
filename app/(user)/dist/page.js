@@ -40,7 +40,6 @@ var react_1 = require("react");
 var Banner_1 = require("@/components/Banner");
 var HomeBanner_1 = require("@/components/HomeBanner");
 var NewArrival_1 = require("@/components/NewArrival");
-// import Jewels from "@/assets/Assesories.jpeg";
 var men_webp_1 = require("@/public/assets/men.webp");
 var WOMEN_webp_1 = require("@/public/assets/WOMEN.webp");
 var fabrics_webp_1 = require("@/public/assets/fabrics.webp");
@@ -50,11 +49,6 @@ var Homepage = function () { return __awaiter(void 0, void 0, void 0, function (
     var banners;
     return __generator(this, function (_a) {
         banners = [
-            // {
-            //   _id: 56,
-            //   img: Jewels,
-            //   text: "Jewels",
-            // },
             {
                 _id: 89,
                 img: men_webp_1["default"],

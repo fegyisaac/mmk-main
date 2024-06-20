@@ -2,13 +2,8 @@
 
 import Image from "next/image";
 import Link from "next/link";
-
 import logo from "@/public/assets/logoBlack.png";
 import { HiMenuAlt2 } from "react-icons/hi";
-
-import { useState } from "react";
-import { FaSearch } from "react-icons/fa";
-import { IoCloseOutline } from "react-icons/io5";
 import { usePathname } from "next/navigation";
 
 const Navbar = () => {

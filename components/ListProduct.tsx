@@ -5,11 +5,6 @@ import { MdOutlineStarPurple500 } from "react-icons/md";
 import { AiOutlineShopping } from "react-icons/ai";
 import { ProductProps } from "@/type";
 
-// interface Props {
-//   product: ProductProps;
-//   bg?: string;
-// }
-
 const ListProduct = ({ product, bg }: any) => {
   return (
     <div className="w-full relative group flex items-center border-[1px] hover:shadow-lg duration-200 shadow-gray-500 rounded-md overflow-hidden group">

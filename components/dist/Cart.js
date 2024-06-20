@@ -3,7 +3,7 @@
 exports.__esModule = true;
 var react_1 = require("react");
 var Container_1 = require("./Container");
-var emptyCart_png_1 = require("@/assets/emptyCart.png");
+var emptyCart_png_1 = require("@/public/assets/emptyCart.png");
 var react_redux_1 = require("react-redux");
 var link_1 = require("next/link");
 var image_1 = require("next/image");
@@ -15,7 +15,6 @@ var framer_motion_1 = require("framer-motion");
 var Cart = function () {
     var productData = react_redux_1.useSelector(function (state) { return state.orebi; }).productData;
     var dispatch = react_redux_1.useDispatch();
-    // const { data: session } = useSession();
     var _a = react_1.useState(0), totalAmt = _a[0], setTotalAmt = _a[1];
     react_1.useEffect(function () {
         var price = 0;
@@ -62,9 +61,7 @@ var Cart = function () {
                         react_1["default"].createElement("span", { className: "font-bold tracking-wide text-lg font-titleFont" },
                             react_1["default"].createElement(Price_1["default"], { amount: totalAmt })))),
                 react_1["default"].createElement("div", { className: "flex justify-end" },
-                    react_1["default"].createElement("button", { 
-                        // onClick={createCheckout}
-                        className: "w-52 h-10 bg-primeColor text-white hover:bg-black duration-300" }, "Proceed to Checkout")))))) : (react_1["default"].createElement(framer_motion_1.motion.div, { initial: { y: 30, opacity: 0 }, animate: { y: 0, opacity: 1 }, transition: { duration: 0.4 }, className: "flex flex-col md:flex-row justify-center items-center gap-4 pb-20 rounded-md shadow-lg" },
+                    react_1["default"].createElement("button", { className: "w-52 h-10 bg-primeColor text-white hover:bg-black duration-300" }, "Proceed to Checkout")))))) : (react_1["default"].createElement(framer_motion_1.motion.div, { initial: { y: 30, opacity: 0 }, animate: { y: 0, opacity: 1 }, transition: { duration: 0.4 }, className: "flex flex-col md:flex-row justify-center items-center gap-4 pb-20 rounded-md shadow-lg" },
         react_1["default"].createElement("div", null,
             react_1["default"].createElement(image_1["default"], { src: emptyCart_png_1["default"], alt: "emptyCart", className: "w-80 rounded-lg p-4 mx-auto" })),
         react_1["default"].createElement("div", { className: "max-w-[500px] p-4 py-8 bg-white flex flex-col gap-4 items-center " },

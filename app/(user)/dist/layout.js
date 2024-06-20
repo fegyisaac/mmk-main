@@ -7,7 +7,6 @@ var Navbar_1 = require("@/components/Navbar");
 require("slick-carousel/slick/slick.css");
 var PageBtn_1 = require("@/components/PageBtn");
 var Layout_1 = require("@/components/Layout");
-// import Footer from "../";
 var Footer_1 = require("@/components/Footer");
 var inter = google_1.Inter({ subsets: ["latin"] });
 exports.metadata = {

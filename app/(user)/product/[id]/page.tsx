@@ -1,6 +1,5 @@
 "use client";
 
-import Container from "@/components/Container";
 import { useParams } from "next/navigation";
 import Image from "next/image";
 import ProductInfo from "@/components/ProductInfo";
@@ -8,7 +7,6 @@ import { useEffect, useState } from "react";
 import { Product } from "@/type";
 
 const ProductPage = () => {
-
   const params = useParams<{ id: string | string[] }>();
   const { id } = params;
   const [productData, setProductData] = useState<Product[]>([]);
@@ -17,10 +15,7 @@ const ProductPage = () => {
     const fetchData = async () => {
       try {
         const res = await fetch("http://localhost:3000/products");
-        // const res = await fetch("/data.json");
         const jsonData: Product[] = await res.json();
-        console.log("joson: ", jsonData);
-        
         setProductData(jsonData);
       } catch (error) {
         console.error("Error fetching data:", error);

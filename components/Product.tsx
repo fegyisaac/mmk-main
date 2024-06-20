@@ -32,7 +32,6 @@ const Product = ({ product, bg }: any) => {
             />
           </Link>
 
-          {/*  */}
           <div className="absolute bottom-0 flex items-center gap-3 justify-center w-full translate-y-[110%] group-hover:-translate-y-2 transition-transform duration-300">
             <button
               onClick={() => {
@@ -58,15 +57,11 @@ const Product = ({ product, bg }: any) => {
               Quick view
             </Link>
           </div>
-          <div
-            className={`${product?.new ? "absolute top-2 right-2" : "hidden"}`}
-          >
+          <div className={`${product?.new ? "absolute top-2 right-2" : "hidden"}`}>
             <p className="bg-primeColor px-4 py-1 text-white flex justify-center items-center text-sm font-semibold hover:bg-black duration-300 cursor-pointer rounded-md">
               {product?.new && "New"}
             </p>
           </div>
-
-
           <div
             className={`${product?.ispopular ? "absolute top-2 right-2 z-50" : "hidden"}`}
           >
@@ -79,23 +74,20 @@ const Product = ({ product, bg }: any) => {
 
       <div className="py-2 flex flex-col gap-1 px-2">
         <div className="">
-          <h2 className="text-[16px] text-primeColor font-semibold pb-2">
-            {product?.title.substring(0, 30)}
-          </h2>
+          <Link href={`product/${product._id}`}>
+            <h2 className="text-[16px] text-primeColor font-semibold pb-2 cursor-pointer">
+              {product?.title.substring(0, 30)}
+            </h2>
+          </Link>
+
           <div className="flex items-center justify-between gap-2">
             <p className="text-[#767676] text-xs italic line-through">
               ${product?.prevPrice}
             </p>
-            <p className="text-sm font-semibold">${product?.price}</p>
+            <p className="text-sm font-semibold">NGN{product?.price}</p>
           </div>
         </div>
         <div className="">
-          {/* <p className="text-[#767676] text-sm">
-            a product by{" "}
-            <span className="font-semibold text-primeColor">
-              {product?.brand}
-            </span>
-          </p> */}
           <div className="flex items-center justify-between gap-1 w-fit">
             <span className="text-sm text-red-500">{product?.rating}</span>
             <MdOutlineStarPurple500 className="text-yellow-500" />
