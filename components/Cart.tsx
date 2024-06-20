@@ -33,15 +33,12 @@ const Cart = () => {
     toast.success("Cart resetted successfully!");
   };
 
-
-
-
   return (
-    <Container>
+    <div className="w-[1050px] mx-auto py-5 px-4 lg:px-0">
       {productData?.length > 0 ? (
         <div className="pb-20">
-          <div className="w-full h-20 bg-[#f5f7f7] text-primeColor hidden lg:grid grid-cols-5 place-content-center px-6 text-lg font-semibold">
-            <h2 className="col-span-2">Product</h2>
+          <div className="w-full h-20 bg-[#f5f7f7] text-primeColor hidden lg:grid grid-cols-6 place-content-center px-6 text-lg font-semibold">
+            <h2 className="col-span-3">Product</h2>
             <h2>Price</h2>
             <h2>Quantity</h2>
             <h2>Sub Total</h2>
@@ -72,7 +69,6 @@ const Cart = () => {
             <p>Update Cart</p>
           </div>
 
-
           <div className="max-w-7xl gap-4 flex justify-end mt-4">
             <div className="w-96 flex flex-col gap-4">
               <h1 className="text-2xl font-semibold text-right">Cart totals</h1>
@@ -97,15 +93,12 @@ const Cart = () => {
                 </p>
               </div>
               <div className="flex justify-end">
-                <button
-                  className="w-52 h-10 bg-primeColor text-white hover:bg-black duration-300"
-                >
+                <button className="w-52 h-10 bg-primeColor text-white hover:bg-black duration-300">
                   Proceed to Checkout
                 </button>
               </div>
             </div>
           </div>
-
         </div>
       ) : (
         <motion.div
@@ -114,7 +107,7 @@ const Cart = () => {
           transition={{ duration: 0.4 }}
           className="flex flex-col md:flex-row justify-center items-center gap-4 pb-20 rounded-md shadow-lg"
         >
-            <div>
+          <div>
             <Image
               src={emptyCart}
               alt="emptyCart"
@@ -127,7 +120,8 @@ const Cart = () => {
             </h1>
             <p className="text-sm text-center px-10 -mt-2">
               Your Shopping cart lives to serve. Give it purpose - fill it with
-              books, electronics, videos, etc. and make it happy.
+              all kinds of native attires and dresses for male and females and
+              make it happy.
             </p>
             <Link
               href={"/"}
@@ -138,7 +132,7 @@ const Cart = () => {
           </div>
         </motion.div>
       )}
-    </Container>
+    </div>
   );
 };
 

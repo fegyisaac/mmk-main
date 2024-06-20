@@ -18,6 +18,10 @@ interface Props {
 const Product = ({ product, bg }: any) => {
   const dispatch = useDispatch();
 
+
+
+
+
   return (
     <div className="border-black border group hover:shadow-lg duration-200 shadow-gray-500 rounded-md overflow-hidden group">
       <div className="bg-white overflow-hidden">

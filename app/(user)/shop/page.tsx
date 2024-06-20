@@ -12,19 +12,9 @@ import { ImList } from "react-icons/im";
 const ShopPage = () => {
   const [showGrid, setShowGrid] = useState(true);
   const [showList, setShowList] = useState(false);
-  const [productData, setProductData] = useState([]);
 
-//   useEffect(() => {
-//     const fetchData = async () => {
-//       try {
-//         const data = allProducts;
-//         setProductData(data);
-//       } catch (error) {
-//         console.error("Error fetching product data:", error);
-//       }
-//     };
-//     fetchData();
-//   }, []);
+  
+
   return (
     <Container>
       <div className="flex items-center justify-between pb-10">

@@ -2,7 +2,6 @@
 "use strict";
 exports.__esModule = true;
 var react_1 = require("react");
-var Container_1 = require("./Container");
 var emptyCart_png_1 = require("@/public/assets/emptyCart.png");
 var react_redux_1 = require("react-redux");
 var link_1 = require("next/link");
@@ -29,9 +28,9 @@ var Cart = function () {
         confirmed && dispatch(orebiSlice_1.resetCart());
         react_hot_toast_1["default"].success("Cart resetted successfully!");
     };
-    return (react_1["default"].createElement(Container_1["default"], null, (productData === null || productData === void 0 ? void 0 : productData.length) > 0 ? (react_1["default"].createElement("div", { className: "pb-20" },
-        react_1["default"].createElement("div", { className: "w-full h-20 bg-[#f5f7f7] text-primeColor hidden lg:grid grid-cols-5 place-content-center px-6 text-lg font-semibold" },
-            react_1["default"].createElement("h2", { className: "col-span-2" }, "Product"),
+    return (react_1["default"].createElement("div", { className: "w-[1050px] mx-auto py-5 px-4 lg:px-0" }, (productData === null || productData === void 0 ? void 0 : productData.length) > 0 ? (react_1["default"].createElement("div", { className: "pb-20" },
+        react_1["default"].createElement("div", { className: "w-full h-20 bg-[#f5f7f7] text-primeColor hidden lg:grid grid-cols-6 place-content-center px-6 text-lg font-semibold" },
+            react_1["default"].createElement("h2", { className: "col-span-3" }, "Product"),
             react_1["default"].createElement("h2", null, "Price"),
             react_1["default"].createElement("h2", null, "Quantity"),
             react_1["default"].createElement("h2", null, "Sub Total")),
@@ -66,7 +65,7 @@ var Cart = function () {
             react_1["default"].createElement(image_1["default"], { src: emptyCart_png_1["default"], alt: "emptyCart", className: "w-80 rounded-lg p-4 mx-auto" })),
         react_1["default"].createElement("div", { className: "max-w-[500px] p-4 py-8 bg-white flex flex-col gap-4 items-center " },
             react_1["default"].createElement("h1", { className: "text-xl font-bold uppercase" }, "Your Cart feels lonely."),
-            react_1["default"].createElement("p", { className: "text-sm text-center px-10 -mt-2" }, "Your Shopping cart lives to serve. Give it purpose - fill it with books, electronics, videos, etc. and make it happy."),
+            react_1["default"].createElement("p", { className: "text-sm text-center px-10 -mt-2" }, "Your Shopping cart lives to serve. Give it purpose - fill it with all kinds of native attires and dresses for male and females and make it happy."),
             react_1["default"].createElement(link_1["default"], { href: "/", className: "bg-primeColor rounded-md cursor-pointer hover:bg-black active:bg-gray-900 px-8 py-2 font-semibold text-lg text-gray-200 hover:text-white duration-300" }, "Continue Shopping"))))));
 };
 exports["default"] = Cart;
