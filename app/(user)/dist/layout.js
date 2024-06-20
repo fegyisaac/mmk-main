@@ -2,7 +2,8 @@
 exports.__esModule = true;
 exports.metadata = void 0;
 var google_1 = require("next/font/google");
-require("../../styles/globals.css");
+// import "../../styles/globals.css";
+require("@/styles/globals.css");
 var Navbar_1 = require("@/components/Navbar");
 require("slick-carousel/slick/slick.css");
 var PageBtn_1 = require("@/components/PageBtn");
